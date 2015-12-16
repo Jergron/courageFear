@@ -1,5 +1,6 @@
 body{
-  font-family: 'Josefin+Slab', serif;
+  // font-family: 'Josefin+Slab', serif;
+  font-family: 'Abril Fatface', cursive;
   background-color: black;
   // background-image: url("https://pixabay.com/static/uploads/photo/2015/03/26/10/09/trees-691019_960_720.jpg");
   // background-image: no-repeat;
@@ -16,6 +17,7 @@ nav li, a{
 nav a:hover {
   text-decoration: none;
   color: #FFE0AF;
+  transition: all 0.5s ease;
 }
 
 #logo {
@@ -25,13 +27,26 @@ nav a:hover {
 }
 
 .title {
-  font-size: 80px;
+  font-size: 55px;
   color: #F5F5F5;
+  letter-spacing: 15px;
   text-align: center;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.9s ease;
 }
 
 .pic {
   text-align: center;
+  border: 21px double #FFE0AF;
+}
+
+@media (max-width: 480px) {
+ 
+  .title {
+    font-size: 56px;
+    transition: all 0.9s ease;
+  }
+
+  
 }

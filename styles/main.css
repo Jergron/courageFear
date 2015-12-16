@@ -1,5 +1,5 @@
 body {
-  font-family: 'Josefin+Slab', serif;
+  font-family: 'Abril Fatface', cursive;
   background-color: black; }
 
 nav li, a {
@@ -10,7 +10,8 @@ nav li, a {
 
 nav a:hover {
   text-decoration: none;
-  color: #FFE0AF; }
+  color: #FFE0AF;
+  transition: all 0.5s ease; }
 
 #logo {
   margin-right: 20px;
@@ -18,13 +19,21 @@ nav a:hover {
   color: #FFE0AF; }
 
 .title {
-  font-size: 80px;
+  font-size: 55px;
   color: #F5F5F5;
+  letter-spacing: 15px;
   text-align: center;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.9s ease; }
 
 .pic {
-  text-align: center; }
+  text-align: center;
+  border: 21px double #FFE0AF; }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 56px;
+    transition: all 0.9s ease; } }
 
 /*# sourceMappingURL=main.css.map */
