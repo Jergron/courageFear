@@ -1,24 +1,18 @@
 define([
   'angular',
   'angularRoute',
-  'angularFire',
-  'angularFilter',
-  'controller/SongCtrl',
-  'controller/SongListCtrl'
-], function(angular, angularRoute, _firebase, SongCtrl, SongListCtrl) {
+  '../controllers/MainCtrl'
+], function(angular, angularRoute, MainCtrl) {
 
     // Declare app level module which depends on views, and components
-    return angular.module('MusicHistory', [
+    return angular.module('Main', [
       'ngRoute',
-      'firebase',
-      'angular.filter',
-      'MusicHistory.songForm',
-      'MusicHistory.songList'
+      'Main.portfolio'
     ])
     .config(['$routeProvider', 
       function($routeProvider) {
         $routeProvider
-        .otherwise({redirectTo: '/songs'});
+        .otherwise({redirectTo: '/'});
     }]);
 });
 
