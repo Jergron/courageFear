@@ -1,0 +1,37 @@
+body{
+  font-family: 'Josefin+Slab', serif;
+  background-color: black;
+  // background-image: url("https://pixabay.com/static/uploads/photo/2015/03/26/10/09/trees-691019_960_720.jpg");
+  // background-image: no-repeat;
+  // background-size: cover;
+}
+
+nav li, a{
+  text-decoration: none;
+  display: inline-block;
+  color: #F5F5F5;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #FFE0AF;
+}
+
+#logo {
+  margin-right: 20px;
+  font-size: 22px;
+  color: #FFE0AF;
+}
+
+.title {
+  font-size: 80px;
+  color: #F5F5F5;
+  text-align: center;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.pic {
+  text-align: center;
+}
