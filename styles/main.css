@@ -1,6 +1,15 @@
-body {
+body, html {
   font-family: 'Abril Fatface', cursive;
-  background-color: black; }
+  background-color: black;
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadein 3s;
+  -ms-animation: fadein 3s;
+  -o-animation: fadein 3s;
+  animation: fadein 3s; }
+
+nav {
+  text-align: center;
+  text-decoration: none; }
 
 nav li, a {
   text-decoration: none;
@@ -12,6 +21,10 @@ nav a:hover {
   text-decoration: none;
   color: #FFE0AF;
   transition: all 0.5s ease; }
+
+a.select {
+  text-decoration: none;
+  color: #FFE0AF; }
 
 #logo {
   margin-right: 20px;
@@ -35,5 +48,30 @@ nav a:hover {
   .title {
     font-size: 56px;
     transition: all 0.9s ease; } }
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*# sourceMappingURL=main.css.map */
