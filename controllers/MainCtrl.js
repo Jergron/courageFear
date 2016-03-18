@@ -11,9 +11,10 @@ define([
   }]).controller("MainCtrl", 
   ["$scope",
   function($scope) {
-    $(document).ready(function (){
-      $('body').css('opacity', '0').fadeTo(1500, 1,'swing'); 
-    });
-  
+
+    // $(document).ready(function (){
+    //   $('body').css('opacity', '0').fadeTo(1500, 1,'swing'); 
+    // });
+    
   }]);
 });
