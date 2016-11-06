@@ -1,11 +1,12 @@
 body, html {
+  height: 100%;
   font-family: 'Abril Fatface', cursive;
   background-color: black;
   -webkit-animation: fadein 3s; 
   -moz-animation: fadein 3s;
   -ms-animation: fadein 3s;
   -o-animation: fadein 3s;
-  animation: fadein 3s;
+  animation: fadein 4s;
 }
 
 nav {
@@ -22,34 +23,69 @@ nav li, a {
 
 nav a:hover {
   text-decoration: none;
-  color: #FFE0AF;
+  color: rgba(259,259,259, 1);
+  text-shadow: rgba(260,260,260,.5) 0 0 15px, rgba(259,259,259,.5) 0 0 10px;
   transition: all 0.5s ease;
 }
 
 a.select {
   text-decoration: none;
-  color: #FFE0AF;
+  text-shadow: rgba(260,260,260,.5) 0 0 15px, rgba(259,259,259,.5) 0 0 10px;
 }
 
+hr {
+    max-width: 50px;
+    border-color: rgba(255,255,255,.15);
+    border-width: 3px;
+}
+
+hr:hover {
+  transition-delay: 500ms;
+  transition: all 1300ms;
+}
+p {
+  display: inline-block;
+}
+h2 {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 100px !important;
+}
+span {
+  opacity: 0;
+  color: rgba(259,259,259, 1);
+  text-shadow: rgba(260,260,260,.5) 0 0 15px, rgba(259,259,259,.5) 0 0 10px;
+    /*transition: all 1300ms;*/
+}
 #logo {
   margin-right: 20px;
-  font-size: 22px;
+  font-size: 25px;
   color: #FFE0AF;
+  text-shadow: rgba(255,224,163,.5) 0 0 15px, rgba(255,224,163,.5) 0 0 10px;
 }
 
 .title {
-  font-size: 55px;
+  font-size: 90px;
+  font-family: 'Kalopsia', cursive;
   color: #F5F5F5;
-  letter-spacing: 15px;
+  letter-spacing: 11px;
   text-align: center;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4);
-  transition: all 0.9s ease;
+}
+
+section{
+  z-index: 1;
+}
+
+span.glue {
+  color: #FFE0AF !important;
+  text-shadow: rgba(255,224,163,.5) 0 0 15px, rgba(255,224,163,.5) 0 0 10px !important;
 }
 
 .pic {
   text-align: center;
-  border: 21px double #FFE0AF;
+  //border: 21px double #FFE0AF;
 }
 
 @media (max-width: 480px) { 
@@ -57,6 +93,15 @@ a.select {
     font-size: 56px;
     transition: all 0.9s ease;
   }
+}
+@font-face {
+  font-family: Kalopsia;
+  src: url(../assets/KalopsiaFont/Kalopsia}ttf.ttf);
+}
+
+@font-face {
+  font-family: Beast;
+  src: url(../assets/beast_mode_suite/BeastMode-Doubleline.ttf);
 }
 
 @keyframes fadein {
@@ -82,4 +127,168 @@ a.select {
 @-o-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+
+
+@function multiple-box-shadow ($n) {
+  $value: '#{random(2000)}px #{random(2000)}px #FFF';
+  
+  @for $i from 2 through $n {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF';
+  };
+
+  @return unquote($value)    
+}
+
+$shadows-small:  multiple-box-shadow(700);
+$shadows-medium: multiple-box-shadow(200);
+$shadows-big:    multiple-box-shadow(100); 
+$snow-small:  multiple-box-shadow(500);
+$snow-medium: multiple-box-shadow(100);
+$snow-big:    multiple-box-shadow(50);  
+
+// html {
+//   height: 100%;
+//   
+// }
+    
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+  animation: animStar 50s linear infinite;  
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+  }
+}
+    
+    
+#stars2{
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $shadows-medium;
+  animation: animStar 100s linear infinite;
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+  }
+}
+    
+    
+#stars3{
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: $shadows-big;
+  animation: animStar 150s linear infinite;
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 1000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;    
+  }
+}
+#snow {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $snow-small;
+  animation: animStar 50s linear infinite;
+ 
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 2000px;
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $snow-small;
+  }
+}
+    
+    
+#snow2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: $snow-medium;
+  animation: animStar 100s linear infinite;
+ 
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 2000px;
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $snow-medium;
+  }
+}
+    
+    
+#snow3 {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  box-shadow: $snow-big;
+  animation: animStar 150s linear infinite;
+
+  &:after {
+    content: " ";
+    position: fixed;
+    top: 1000px;
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $snow-big;    
+  }
+}
+// span {
+//   background: -webkit-linear-gradient(white, #38495a);
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;   
+// }
+    
+@keyframes animStar {
+  from { transform: translateY(-2000px); } 
+  to { transform: translateY( 0px); }
+}
+
+.parallax_image_first{
+  background-image: url("../assets/darkLot.png");
+  overflow: hidden;
+}
+
+.parallax_image_second {
+  opacity: 1; 
+  background-image: url("../assets/darkLot.png");
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+  //background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%); 
+  //z-index: -1;
+}
+.parallax_section {
+  height: 800px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 100% auto;
+    position:relative;
 }
