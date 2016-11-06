@@ -1,4 +1,4 @@
-# courageFear
+# musicWebProject
 *A web application for a band to inform their fans of any updates.* 
 ### Tools used
 ![RequireJS] (http://requirejs.org/i/logo.png "RequireJS")
